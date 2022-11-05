@@ -1,9 +1,9 @@
 package get_requests;
 
-import base_url.JsonplaceholderBaseUrl;
+import base_urls.JsonplaceholderBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
-import testdata.JsonplaceHolderTestData;
+import testdata.JsonPlaceHolderTestData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -60,7 +60,7 @@ public class Get08b extends JsonplaceholderBaseUrl {
 
         //Set the Expected data
 
-        JsonplaceHolderTestData objJsonPLaceHolder=new JsonplaceHolderTestData();
+        JsonPlaceHolderTestData objJsonPLaceHolder=new JsonPlaceHolderTestData();
         Map<String,Object> expectedData=objJsonPLaceHolder.expectedDataMethod(1,"quis ut nam facilis et officia qui",false);
         System.out.println("expectedData = " + expectedData);
 
