@@ -1,10 +1,10 @@
 package patch_requests;
 
-import base_url.JsonplaceholderBaseUrl;
+import base_urls.JsonplaceholderBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
-import testdata.JsonplaceHolderTestData;
+import testdata.JsonPlaceHolderTestData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,7 +40,7 @@ I send PATCH Request to the Url
 
         //Set the expected data
 
-        JsonplaceHolderTestData obj=new JsonplaceHolderTestData();
+        JsonPlaceHolderTestData obj=new JsonPlaceHolderTestData();
         Map<String,Object> expectedData=obj.expectedDataMethod(null,"Wash the dishes",null);
         System.out.println("expectedData = " + expectedData);
 
