@@ -1,9 +1,12 @@
 package get_requests;
 
 import base_urls.GoRestBaseUrl;
+import io.restassured.response.Response;
 import org.junit.Test;
 import pojos.GoRestDataPojo;
 import pojos.GoRestPojo;
+
+import static io.restassured.RestAssured.given;
 
 public class Get13Pojo extends GoRestBaseUrl {
     /*
@@ -43,6 +46,12 @@ public class Get13Pojo extends GoRestBaseUrl {
         GoRestPojo expectedData=new GoRestPojo(null,goRestDataPojo);
 
         System.out.println(expectedData);
+
+
+        //Send the request and get the response
+
+        Response response=given().spec(spec).when().get("/{first}/{second}");
+        response.prettyPrint();
 
 
     }
