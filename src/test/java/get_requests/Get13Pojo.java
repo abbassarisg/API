@@ -2,6 +2,8 @@ package get_requests;
 
 import base_urls.GoRestBaseUrl;
 import org.junit.Test;
+import pojos.GoRestDataPojo;
+import pojos.GoRestPojo;
 
 public class Get13Pojo extends GoRestBaseUrl {
     /*
@@ -13,16 +15,16 @@ public class Get13Pojo extends GoRestBaseUrl {
             Status Code should be 200
         And
             Response body should be like
-          {
-            "meta": null,
-            "data": {
-                "id": 2508,
-                "name": "Sharmila Deshpande VM",
-                "email": "deshpande_sharmila_vm@becker.name",
-                "gender": "female",
-                "status": "active"
-                 }
-          }
+         {
+    "meta": null,
+    "data": {
+        "id": 2508,
+        "name": "Rajinder Acharya",
+        "email": "rajinder_acharya@mosciski.net",
+        "gender": "female",
+        "status": "active"
+    }
+}
     */
 
     @Test
@@ -35,6 +37,12 @@ public class Get13Pojo extends GoRestBaseUrl {
 
 
         //Set The expected data
+
+        GoRestDataPojo goRestDataPojo=new GoRestDataPojo(2508,"Rajinder Acharya","rajinder_acharya@mosciski.net","female","active");
+
+        GoRestPojo expectedData=new GoRestPojo(null,goRestDataPojo);
+
+        System.out.println(expectedData);
 
 
     }

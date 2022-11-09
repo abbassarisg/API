@@ -18,7 +18,6 @@ public class GoRestDataPojo {
         this.gender = gender;
         this.status = status;
     }
-
     public GoRestDataPojo() {
     }
 
