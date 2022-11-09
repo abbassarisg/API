@@ -7,14 +7,14 @@ public class DummyRestApiDataPojo {
     private Integer employee_age;
     private String profile_image;
 
-    public DummyRestApiDataPojo() {
-    }
-
     public DummyRestApiDataPojo(String employee_name, Integer employee_salary, Integer employee_age, String profile_image) {
         this.employee_name = employee_name;
         this.employee_salary = employee_salary;
         this.employee_age = employee_age;
         this.profile_image = profile_image;
+    }
+
+    public DummyRestApiDataPojo() {
     }
 
     public String getEmployee_name() {
