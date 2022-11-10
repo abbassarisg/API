@@ -43,7 +43,7 @@ public class Delete02 extends DummyRestApiBaseUrl {
        */
 
     @Test
-    public void name() {
+    public void delete02() {
 
         spec.pathParams("first","delete","second",2);
 
