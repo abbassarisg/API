@@ -2,6 +2,8 @@ package put_request;
 
 import base_urls.DummyRestApiBaseUrl;
 import org.junit.Test;
+import pojos.DummyRestApiDataPojo;
+import pojos.DummyRestApiResponseBodyPojo;
 
 public class Put02 extends DummyRestApiBaseUrl {
     /*
@@ -61,5 +63,11 @@ public class Put02 extends DummyRestApiBaseUrl {
     public void put02() {
 
         spec.pathParams("first","update","second",21);
+
+        DummyRestApiDataPojo dummyRestApiDataPojo=new DummyRestApiDataPojo("Ali Can",111111,23,"Perfect image");
+        DummyRestApiResponseBodyPojo expectedData=new DummyRestApiResponseBodyPojo("success",dummyRestApiDataPojo,"Successfully! Record has been updated.");
+        System.out.println("expectedData = " + expectedData);
+    
+    
     }
 }
