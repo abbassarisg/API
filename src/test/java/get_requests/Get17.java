@@ -39,7 +39,7 @@ public class Get17 extends DummyRestApiBaseUrl {
         DummyRestApiResponseBodyPojo expectedData = new DummyRestApiResponseBodyPojo("success",dummyRestApiDataPojo, "Successfully! Record has been fetched.");
         System.out.println("expectedData = " + expectedData);
 
-        Response response = given().spec(spec).when().get("/{first}/{second}");
+        Response response = given().when().get("https://dummy.restapiexample.com/api/v1/employee/1");
         response.prettyPrint();
 
         DummyRestApiResponseBodyPojo actualData = ObjectMapperUtils.convertJsonToJava(response.asString(),DummyRestApiResponseBodyPojo.class);
