@@ -1,6 +1,10 @@
 package delete_requests;
 
-public class Delete02 {
+import base_urls.DummyRestApiBaseUrl;
+import org.junit.Test;
+import pojos.DummyRestApiDeletePojo;
+
+public class Delete02 extends DummyRestApiBaseUrl {
 
     /*
      URL: https://dummy.restapiexample.com/api/v1/delete/2
@@ -32,4 +36,13 @@ public class Delete02 {
 
 
        */
+
+    @Test
+    public void name() {
+
+        spec.pathParams("first","delete","second",2);
+
+        DummyRestApiDeletePojo expectedData=new DummyRestApiDeletePojo("success","2","Successfully! Record has been deleted");
+
+    }
 }
