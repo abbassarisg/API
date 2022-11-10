@@ -1,16 +1,14 @@
 
 package utils;
+
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.IOException;
 import java.util.HashMap;
-import org.codehaus.jackson.map.ObjectMapper;
-
-import java.io.IOException;
 
 public class ObjectMapperUtils {
 
- //new ObjectMapper().readValue(jsonInString, HashMap .class);
+    //new ObjectMapper().readValue(jsonInString, HashMap .class);
 
     private static ObjectMapper mapper;
 
@@ -29,6 +27,5 @@ public class ObjectMapperUtils {
         }
 
         return javaResult;
-
     }
 }
