@@ -1,26 +1,34 @@
-package utils;
 
+package utils;
+import org.codehaus.jackson.map.ObjectMapper;
+
+import java.io.IOException;
+import java.util.HashMap;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.IOException;
 
 public class ObjectMapperUtils {
 
+ //new ObjectMapper().readValue(jsonInString, HashMap .class);
 
-    private  static org.codehaus.jackson.map.ObjectMapper mapper;
+    private static ObjectMapper mapper;
 
     static {
-        mapper=new ObjectMapper();
+        mapper = new ObjectMapper();
     }
 
-    public  static <T> T convertJsonToJava(String json, Class<T> cls){ //Generic method
+    public static <T> T convertJsonToJava(String json, Class<T> cls){//Generic Method
 
-    T javaResult=null;
+        T javaResult = null;
+
         try {
-           javaResult= mapper.readValue(json,cls);
+            javaResult = mapper.readValue(json,cls);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         return javaResult;
+
     }
 }
