@@ -1,9 +1,13 @@
 package put_request;
 
 import base_urls.DummyRestApiBaseUrl;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.junit.Test;
 import pojos.DummyRestApiDataPojo;
 import pojos.DummyRestApiResponseBodyPojo;
+
+import static io.restassured.RestAssured.*;
 
 public class Put02 extends DummyRestApiBaseUrl {
     /*
@@ -67,6 +71,8 @@ public class Put02 extends DummyRestApiBaseUrl {
         DummyRestApiDataPojo dummyRestApiDataPojo=new DummyRestApiDataPojo("Ali Can",111111,23,"Perfect image");
         DummyRestApiResponseBodyPojo expectedData=new DummyRestApiResponseBodyPojo("success",dummyRestApiDataPojo,"Successfully! Record has been updated.");
         System.out.println("expectedData = " + expectedData);
+
+        Response reponse=given().spec(spec).contentType(ContentType.JSON).body(dummyRestApiDataPojo).when().patch("/{first}/{second}");
     
     
     }
