@@ -32,7 +32,7 @@ public class Post04Pojo extends RestfulBaseUrl {
             Status code is 200
         And
             Response body is like {
-                                    "bookingid": 16,
+                                    "booking id": 16,
                                     "booking" :{
                                        "firstname": "Ali",
                                        "lastname": "Can",
